@@ -6,7 +6,7 @@ const ObjectId = require('mongodb').ObjectId;
 
 
 const app = express();
-const port = 5000 ;
+const port = process.env.PORT || 5000 ;
 
 // middleware
 app.use(cors());
@@ -85,7 +85,7 @@ run().catch(console.dir)
 /* --server will send request & i will return on basis of request ---*/
 app.get('/', (req, res) => {
     /* ---As i am sending data on basis of server request , so i will use'res.send' not 'res.req'----- */
-    res.send('running Genious Server')
+    res.send('running Genius Server')
 });
 
 
